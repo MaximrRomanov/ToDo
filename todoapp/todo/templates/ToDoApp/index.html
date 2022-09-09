@@ -1,0 +1,17 @@
+{% extends 'ToDoApp/base.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Статус задачи</th>
+        <th></th>
+    </tr>
+    {% for task in task_list %}
+        <tr>
+            <td>{{task.title}}</td>
+            <td>{{task.complete}}</td>
+            <td><a href="{% url 'task' task.pk"></a></td>
+        </tr>
+</table>
+{% endblock %}
